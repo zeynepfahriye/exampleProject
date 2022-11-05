@@ -1,12 +1,24 @@
 import { View, Text } from 'react-native'
-import React from 'react'
-import { Appbar } from 'react-native-paper'
-
-const Header = ({title}) => {
+import React, { useState } from 'react'
+import { Appbar, Menu } from 'react-native-paper'
+const Header = ({title,navigation,hasBackButton}) => {
+const [visible,setVisible]= useState(false)
+const goBack=()=>{navigation?.goBack()}
+const openMenu = ()=>{}
   return (
-    <Appbar>
-        <Appbar.BackAction />
-        <Appbar.Content title={title}/>
+    <Appbar style={{backgroundColor:'purple'}}>
+    {
+      hasBackButton ? 
+      <Appbar.BackAction 
+        onPress={goBack}
+      /> :
+      <Appbar.Action
+        icon={"heart"} 
+        onPress={()=>{navigation.navigate("Deliveries")}}
+      />
+    }
+        <Appbar.Content 
+        title={title}/>
     </Appbar>
   )
 }

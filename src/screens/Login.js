@@ -1,8 +1,9 @@
-import { StyleSheet, SafeAreaView,View } from 'react-native'
+import { StyleSheet, SafeAreaView,View, Alert } from 'react-native'
 import React from 'react'
 import { Button, Card, TextInput } from 'react-native-paper'
 
-const Login = () => {
+const Login = ({navigation}) => {
+
   return (
    <SafeAreaView style={styles.content}>
    <View style ={styles.view}>
@@ -12,8 +13,8 @@ const Login = () => {
             <TextInput label="Email" keyboardType='email-address'></TextInput>
             <TextInput label="Password" secureTextEntry={true}></TextInput>
             <Button uppercase={false} style={styles.cardButton}>Forget email/password</Button>
-            <Button mode="contained" style={styles.cardButton}>Login</Button>
-            <Button style={styles.cardButton}>Register</Button>
+            <Button onPress={()=>navigation.push("Home",{screen:"Home"})} mode="contained" style={styles.cardButton}>Login</Button>
+            <Button onPress={()=>navigation.navigate("Register",{screen:"Register"})} style={styles.cardButton}>Register</Button>
 
         </Card.Content>
     </Card>
