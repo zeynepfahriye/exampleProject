@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView ,Platform, ScrollView} from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
 import { Avatar, Card, List } from 'react-native-paper'
@@ -7,6 +7,15 @@ import MapView from 'react-native-maps'
 const Delivery = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
+    {Platform.OS === 'ios' &&
+    <View style={{
+        width: "100%",
+        height: 100, // For all devices, even X, XS Max
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        backgroundColor: "orange"}}
+   />}
     <Header title={"Delivery Details"} hasBackButton={true} navigation={navigation}/>
       <View style={{flex:1}}>
         <MapView

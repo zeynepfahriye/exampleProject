@@ -6,19 +6,23 @@ const [visible,setVisible]= useState(false)
 const goBack=()=>{navigation?.goBack()}
 const openMenu = ()=>{}
   return (
-    <Appbar style={{backgroundColor:'purple'}}>
+    <Appbar style={{backgroundColor:'orange'}}>
     {
       hasBackButton ? 
       <Appbar.BackAction 
         onPress={goBack}
+        color='white'
       /> :
       <Appbar.Action
         icon={"heart"} 
+        color='white'
         onPress={()=>{navigation.navigate("Deliveries")}}
       />
     }
         <Appbar.Content 
-        title={title}/>
+        title={title}
+          color='white'
+        />
     </Appbar>
   )
 }

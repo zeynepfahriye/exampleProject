@@ -1,16 +1,31 @@
-import { View, Text, SafeAreaView,StyleSheet } from 'react-native'
+import { View, Platform, SafeAreaView,StyleSheet } from 'react-native'
 import React from 'react'
 import Header from '../components/Header'
-import { Button, TextInput } from 'react-native-paper'
+import { Button, TextInput ,Card} from 'react-native-paper'
 
 const Address = ({navigation}) => {
 
     const destination = [1,2];
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex:1,backgroundColor:'#e0b0ff'}}>
+    {Platform.OS === 'ios' &&
+    <View style={{
+        width: "100%",
+        height: 100, // For all devices, even X, XS Max
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        backgroundColor: "orange"}}
+   />}
    <Header title={"Address"} hasBackButton={true} navigation={navigation}/>
-   <View style={styles.marginHorizantal}>
-    <TextInput
+   <View style={{ padding:20,
+    justifyContent:'center',
+    paddingTop:100}}>
+   <Card>
+    <Card.Title title="add address"></Card.Title>
+    <Card.Content>
+    <View style={styles.marginHorizantal}>
+        <TextInput
     style={{backgroundColor:'transparent'}}
      label="origin"/>
     {
@@ -28,8 +43,7 @@ const Address = ({navigation}) => {
         }
         />
         )}
-   </View>
-   <View>
+        <View>
     <Button 
     labelStyle={styles.buttonIconLabel}
     style={styles.buttonIcon} icon={"plus"}></Button>
@@ -37,6 +51,10 @@ const Address = ({navigation}) => {
    <Button 
    labelStyle={styles.readyButtonLabel}
    style={styles.readyButton} mode="contained" uppercase={false}>Ready</Button>
+   </View>
+    </Card.Content>
+   </Card>
+   </View>
     </SafeAreaView>
   )
 }
@@ -58,7 +76,7 @@ const styles = StyleSheet.create({
         marginTop:80,
         height:50,
         paddingVertical:3,
-        backgroundColor:'purple',
+        backgroundColor:'orange',
         justifyContent:'center'
     },
     readyButtonLabel:{

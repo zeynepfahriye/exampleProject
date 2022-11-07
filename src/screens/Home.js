@@ -1,4 +1,4 @@
-import { View, Image, SafeAreaView } from 'react-native'
+import { View, Image, SafeAreaView ,Platform} from 'react-native'
 import React,{useEffect} from 'react'
 import MapView, { Marker } from 'react-native-maps'
 import { FAB } from 'react-native-paper';
@@ -10,6 +10,15 @@ const Home = ({navigation,state}) => {
   
   return (
     <SafeAreaView style={{flex:1}}>
+      {Platform.OS === 'ios' &&
+    <View style={{
+        width: "100%",
+        height: 100, // For all devices, even X, XS Max
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        backgroundColor: "orange"}}
+   />}
     <Header title={"Delivery Details"} navigation={navigation}/>
       <MapView 
       testID='mapView'
@@ -48,9 +57,9 @@ const Home = ({navigation,state}) => {
       </MapView>
       <FAB 
       icon={"plus"}
-      size={30}
+      size={50}
       onPress={()=>navigation.navigate("Address")}
-      style={{width:60,height:60,borderRadius:30,position:'absolute',right:0,bottom:0,margin:15,backgroundColor:'purple',alignItems:'center'}}
+      style={{width:60,height:60,borderRadius:30,position:'absolute',right:0,bottom:0,margin:15,backgroundColor:'orange',alignItems:'center'}}
       ></FAB>
       {states == 2 ? <ConfirmDeliveryCard/>:null}
       {states == 3 ? <SearchingDelivery/>:null}

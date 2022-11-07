@@ -20,7 +20,8 @@ const register = ()=> {navigation.navigate("Register")}
         >
         {({handleSubmit,handleChange,errors,setFieldTouched,touched,values})=>(
             <>
-            <TextInput 
+            <TextInput
+            style={{backgroundColor:'transparent'}} 
             label="Email" 
             keyboardType='email-address' 
             onChangeText={handleChange('email')}
@@ -31,7 +32,8 @@ const register = ()=> {navigation.navigate("Register")}
             :null
             }
             <TextInput
-             label="Password" 
+             label="Password"
+             style={{backgroundColor:'transparent'}}  
              secureTextEntry={true}
              onChangeText={handleChange('password')}
              testID='password'
@@ -41,7 +43,7 @@ const register = ()=> {navigation.navigate("Register")}
             :null
             }
             <Button testID='recoveryButton' uppercase={false} style={styles.cardButton} disabled={values.email =='' || errors.email ? true : false}>Forget email/password</Button>
-            <Button testID='loginButton' onPress={handleSubmit} mode="contained" style={styles.cardButton}>Login</Button>
+            <Button testID='loginButton' onPress={handleSubmit} mode="contained" style={[styles.cardButton,{backgroundColor:'orange'}]}>Login</Button>
             <Button testID='registerButton' onPress={register} style={styles.cardButton}>Register</Button>
             </>
         )}
@@ -60,18 +62,18 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         flexDirection:'row',
-        backgroundColor:'rgba(101,37,131)'
+        backgroundColor:'#e0b0ff'
     },
     view:{
-        width:'80%'
+        width:'85%'
     },
     cardTitle:{
-        color:'rgba(101,37,131)'
+        color:'purple'
     },
     cardButton:{
         margin:2,
         marginLeft:0,
-        marginRight:0
+        marginRight:0,
     }
 })
 export default Login
