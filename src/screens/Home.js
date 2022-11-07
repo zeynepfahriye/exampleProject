@@ -3,14 +3,17 @@ import React,{useEffect} from 'react'
 import MapView, { Marker } from 'react-native-maps'
 import { FAB } from 'react-native-paper';
 import Header from '../components/Header';
-
-const Home = ({navigation}) => {
-  const state = 1;
+import SearchingDelivery from '../components/SearchingDelivery'
+import ConfirmDeliveryCard from '../components/ConfirmDeliveryCard'
+const Home = ({navigation,state}) => {
+  const states = state || 1;
   
   return (
     <SafeAreaView style={{flex:1}}>
     <Header title={"Delivery Details"} navigation={navigation}/>
-      <MapView style={{flex:1}}
+      <MapView 
+      testID='mapView'
+      style={{flex:1}}
       initialRegion={{
         latitude: -3.722,
           longitude: -38.515,
@@ -18,7 +21,7 @@ const Home = ({navigation}) => {
           longitudeDelta: 0.04,
       }}
       >
-      {state == 1 ? 
+      {states == 1 ? 
       <>
       <Marker
       description='1'
@@ -49,6 +52,8 @@ const Home = ({navigation}) => {
       onPress={()=>navigation.navigate("Address")}
       style={{width:60,height:60,borderRadius:30,position:'absolute',right:0,bottom:0,margin:15,backgroundColor:'purple',alignItems:'center'}}
       ></FAB>
+      {states == 2 ? <ConfirmDeliveryCard/>:null}
+      {states == 3 ? <SearchingDelivery/>:null}
     </SafeAreaView>
   )
 }

@@ -13,8 +13,8 @@ const Login = ({navigation}) => {
             <TextInput label="Email" keyboardType='email-address'></TextInput>
             <TextInput label="Password" secureTextEntry={true}></TextInput>
             <Button uppercase={false} style={styles.cardButton}>Forget email/password</Button>
-            <Button onPress={()=>navigation.push("Home",{screen:"Home"})} mode="contained" style={styles.cardButton}>Login</Button>
-            <Button onPress={()=>navigation.navigate("Register",{screen:"Register"})} style={styles.cardButton}>Register</Button>
+            <Button testID='loginButton' onPress={()=>navigation.navigate("Home")} mode="contained" style={styles.cardButton}>Login</Button>
+            <Button testID='registerButton' onPress={()=>navigation.navigate("Register")} style={styles.cardButton}>Register</Button>
 
         </Card.Content>
     </Card>
