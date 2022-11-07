@@ -4,7 +4,9 @@ import { Button, Card, IconButton, List } from 'react-native-paper'
 
 const ConfirmDeliveryCard = () => {
   return (
-    <Card>
+    <Card
+    testID='confirmDeliveryCard'
+    >
     <Card.Content>
       <List.Item
         title="$10.00"

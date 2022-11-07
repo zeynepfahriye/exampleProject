@@ -3,7 +3,7 @@ import React from 'react'
 import { ActivityIndicator, Button, Title } from 'react-native-paper'
 const SearchingDelivery = () => {
   return (
-    <View style={styles.flexCenter}>
+    <View style={styles.flexCenter} testID={"searchDeliveryCard"}>
           <ActivityIndicator animating={true} color='purple' />
           <Title style={styles.title}>search for a delivery person in region</Title>
           <Button style={styles.cancelDeliveryButton} mode="contained" color="purple">Cancel</Button>
