@@ -1,0 +1,504 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form header snapshot 1`] = `
+<RCTSafeAreaView
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "orange",
+        "height": 100,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "orange",
+        "elevation": 4,
+        "flexDirection": "row",
+        "height": 56,
+        "paddingHorizontal": 4,
+        "shadowColor": "#000000",
+        "shadowOffset": Object {
+          "height": 3,
+          "width": 0,
+        },
+        "shadowOpacity": 0.24,
+        "shadowRadius": 4,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      focusable={true}
+      hitSlop={
+        Object {
+          "bottom": 6,
+          "left": 6,
+          "right": 6,
+          "top": 6,
+        }
+      }
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Array [
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "margin": 6,
+              "overflow": "hidden",
+            },
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "width": 36,
+            },
+            undefined,
+            undefined,
+          ],
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              accessibilityElementsHidden={true}
+              allowFontScaling={false}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "white",
+                    "fontSize": 24,
+                  },
+                  Array [
+                    Object {
+                      "lineHeight": 24,
+                      "transform": Array [
+                        Object {
+                          "scaleX": 1,
+                        },
+                      ],
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                  ],
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              󰋑
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityState={
+        Object {
+          "disabled": true,
+        }
+      }
+      accessible={true}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "paddingHorizontal": 12,
+          },
+          Array [
+            Object {
+              "marginLeft": 8,
+            },
+            Object {
+              "alignItems": "center",
+            },
+            undefined,
+          ],
+        ]
+      }
+    >
+      <Text
+        accessibilityRole="header"
+        accessibilityTraits="header"
+        accessible={true}
+        numberOfLines={1}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontFamily": "System",
+              "fontWeight": "400",
+            },
+            Object {
+              "textAlign": "left",
+            },
+            Array [
+              Object {
+                "color": "white",
+                "fontFamily": "System",
+                "fontWeight": "400",
+              },
+              Object {
+                "fontSize": 17,
+              },
+              undefined,
+            ],
+          ]
+        }
+      >
+        Delivery Details
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "width": 48,
+        }
+      }
+    />
+  </View>
+  <AIRMap
+    initialRegion={
+      Object {
+        "latitude": -3.722,
+        "latitudeDelta": 0.09,
+        "longitude": -38.515,
+        "longitudeDelta": 0.04,
+      }
+    }
+    onChange={[Function]}
+    onMapReady={[Function]}
+    region={null}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+    testID="mapView"
+  >
+    <AIRMapMarker
+      coordinate={
+        Object {
+          "latitude": -3.722,
+          "longitude": -38.515,
+        }
+      }
+      description="1"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "position": "absolute",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/icons/motor.png",
+          }
+        }
+        style={
+          Object {
+            "height": 40,
+            "width": 30,
+          }
+        }
+      />
+    </AIRMapMarker>
+    <AIRMapMarker
+      coordinate={
+        Object {
+          "latitude": -3.72,
+          "longitude": -38.517,
+        }
+      }
+      description="1"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "position": "absolute",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/icons/motor.png",
+          }
+        }
+        style={
+          Object {
+            "height": 40,
+            "width": 30,
+          }
+        }
+      />
+    </AIRMapMarker>
+    <AIRMapMarker
+      coordinate={
+        Object {
+          "latitude": -3.722,
+          "longitude": -38.512,
+        }
+      }
+      description="1"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "position": "absolute",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/icons/motor.png",
+          }
+        }
+        style={
+          Object {
+            "height": 40,
+            "width": 30,
+          }
+        }
+      />
+    </AIRMapMarker>
+  </AIRMap>
+  <View
+    collapsable={false}
+    pointerEvents="auto"
+    size={50}
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "orange",
+        "borderRadius": 30,
+        "bottom": 0,
+        "elevation": 6,
+        "height": 60,
+        "margin": 15,
+        "opacity": 1,
+        "position": "absolute",
+        "right": 0,
+        "shadowColor": "#000000",
+        "shadowOffset": Object {
+          "height": 5,
+          "width": 0,
+        },
+        "shadowOpacity": 0.24,
+        "shadowRadius": 6,
+        "transform": Array [
+          Object {
+            "scale": 1,
+          },
+        ],
+        "width": 60,
+      }
+    }
+  >
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "overflow": "hidden",
+          },
+          Object {
+            "borderRadius": 28,
+          },
+        ]
+      }
+    >
+      <View
+        pointerEvents="none"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            },
+            Object {
+              "height": 56,
+              "width": 56,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+              Object {
+                "height": 24,
+                "width": 24,
+              },
+            ]
+          }
+        >
+          <View
+            collapsable={false}
+            style={
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "opacity": 1,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+                "transform": Array [
+                  Object {
+                    "rotate": "0deg",
+                  },
+                ],
+              }
+            }
+          >
+            <Text
+              accessibilityElementsHidden={true}
+              allowFontScaling={false}
+              importantForAccessibility="no-hide-descendants"
+              pointerEvents="none"
+              selectable={false}
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(0, 0, 0, .54)",
+                    "fontSize": 24,
+                  },
+                  Array [
+                    Object {
+                      "lineHeight": 24,
+                      "transform": Array [
+                        Object {
+                          "scaleX": 1,
+                        },
+                      ],
+                    },
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                  ],
+                  Object {
+                    "fontFamily": "Material Design Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                  Object {},
+                ]
+              }
+            >
+              󰐕
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

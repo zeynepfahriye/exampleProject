@@ -2,7 +2,6 @@ import React from 'react'
 import 'react-native'
 import {render,fireEvent, waitFor} from '@testing-library/react-native'
 import Login from '../src/screens/Login'
-import Register from '../src/screens/Register'
 import { loginForm } from '../src/screens/LoginForm'
 
 describe("Login Screen",()=> {
